@@ -11190,7 +11190,7 @@ a:focus {
   width: 35px;
   height: 35px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 .nav__social-item:first-child {
   margin-right: 20px;
@@ -11382,10 +11382,15 @@ a:focus {
   justify-content: flex-end;
 }
 .product__block img {
-  width: 370px !important;
+  width: auto !important;
+  max-width: 370px !important;
+  min-width: auto;
   height: auto;
+  max-height: 370px !important;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 .product__block--slider img {
   width: 170px !important;
@@ -11401,7 +11406,7 @@ a:focus {
   font-size: 15px;
   font-weight: 800;
   line-height: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #1D3C50;
 }
 @media (max-width: 1199.98px) {
