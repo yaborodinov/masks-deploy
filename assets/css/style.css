@@ -12503,7 +12503,7 @@ a:focus {
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 .nav__social-item:first-child {
@@ -12525,10 +12525,18 @@ a:focus {
 .title__section {
     height: 750px;
     width: 100%;
+    padding-top: 35px;
     background-image: url(../images/section__title.png);
     background-size: cover;
     background-position: center;
     z-index: 1;
+}
+
+.title__section-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .title__section-title {
@@ -12537,9 +12545,10 @@ a:focus {
     font-size: 40px;
     line-height: 54px;
     color: #fff;
-    padding-top: 220px;
-    margin-bottom: 40px;
+    padding: 20px;
     text-transform: uppercase;
+    background-color: #1d3c50b0;
+    border-radius: 10px;
 }
 
 @media (max-width: 991.98px) {
@@ -12549,20 +12558,49 @@ a:focus {
     }
 }
 
+@media (max-width: 767.98px) {
+    .title__section-title {
+        font-size: 24px;
+        line-height: 45px;
+    }
+}
+
 .title__section-subtitle {
-    width: 600px;
+    width: 100%;
     font-weight: 600;
     font-size: 25px;
     line-height: 34px;
     color: #fff;
-    margin-bottom: 50px;
+    margin-top: 300px;
+    margin-bottom: 10px;
+    padding: 20px 0 20px 20px;
+    text-align: right;
 }
 
 @media (max-width: 991.98px) {
     .title__section-subtitle {
         width: 100%;
         font-size: 20px;
+        margin-top: 340px;
     }
+}
+
+@media (max-width: 767.98px) {
+    .title__section-subtitle {
+        margin-top: 250px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .title__section-subtitle {
+        margin-top: 205px;
+        padding: 20px 0 0 20px;
+    }
+}
+
+.title__section-btn {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .btn-request {
@@ -12573,16 +12611,29 @@ a:focus {
 }
 
 .wave-img {
-    height: 380px;
+    height: 280px;
     width: 100%;
     z-index: 10;
-    margin-top: -156px;
+    margin-top: -53px;
 }
 
 @media (max-width: 991.98px) {
     .wave-img {
-        height: auto;
+        height: 220px;
         margin-top: -80px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wave-img {
+        height: 130px;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .wave-img {
+        height: 85px;
     }
 }
 
@@ -12619,12 +12670,38 @@ a:focus {
     line-height: 40px;
     color: #1D3C50;
     margin-bottom: 50px;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+    .section__title {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
 }
 
 .section__title--light {
     color: #fff;
+}
+
+.section__title--pt0 {
+    padding-top: 0;
+}
+
+.section__title--inline {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 10px;
+    line-height: 30px;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1d3c50b0;
+    border-radius: 10px;
 }
 
 .product__block {
@@ -12643,28 +12720,27 @@ a:focus {
 }
 
 .product__block img {
-    width: 370px !important;
+    width: auto !important;
+    max-width: 370px !important;
+    min-width: auto;
     height: auto;
+    max-height: 370px !important;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .product__block--slider img {
-    width: 170px !important;
+    width: 100% !important;
     height: auto;
-}
-
-@media (max-width: 1199.98px) {
-    .product__block--slider img {
-        width: 130px !important;
-    }
 }
 
 .product__title {
     font-size: 15px;
     font-weight: 800;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #1D3C50;
 }
 
@@ -12703,10 +12779,6 @@ a:focus {
         text-align: center;
         margin-bottom: 10px;
     }
-}
-
-.product__price-btn {
-    margin-left: 30px;
 }
 
 .payment__block {
@@ -12792,7 +12864,7 @@ a:focus {
     margin-top: 40px;
     height: 750px;
     width: 100%;
-    background-image: url(../images/font2.jpg);
+    background-image: url(../images/bg-sec.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -12801,12 +12873,36 @@ a:focus {
     margin-top: 150px;
 }
 
+@media (max-width: 575.98px) {
+    .about__us-col-right {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about__us-text-row {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 .about__us-text {
     font-size: 16px;
     line-height: 22px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: #1d3c50b0;
+    border-radius: none;
+}
+
+.about__us-text:first-child {
+    padding: 20px 20px 0 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.about__us-text:last-child {
+    border-radius: 0 0 10px 10px;
 }
 
 .benefits__item {
